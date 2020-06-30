@@ -1,0 +1,364 @@
+!DOCTYPE html>
+<html lang="en">
+    
+   <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+         google.charts.load('current', {'packages':['corechart']})
+      google.charts.setOnLoadCallback(drawBarchart);
+        google.charts.setOnLoadCallback(drawCurvechart);
+        
+
+      function drawBarchart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Month', 'Positive', 'Conformed', 'Death'],
+          ['Feb', 3, 3, 0],
+          ['March', 1251, 1117, 32],
+          ['April',34863 , 24641,1154 ],
+          ['May',124794 ,69244 , 3726]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'COVID-19 CASES',
+            
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+        
+
+      function drawCurvechart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'GDP GROWTH RATE %'],
+          ['2012-13',  7.49],
+          ['2013-14', 7.34 ],
+          ['2014-15',  8.70 ],
+          ['2015-16',  8.03  ],
+          ['2016-17',  8.87  ],
+          ['2017-18',  6.77 ], 
+          ['2018-19',  7.00  ],
+          ['2019-20',  4.5 ]
+        ]);
+
+        var options = {
+          title: 'India GDP',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+    /*chart for economy*/
+    
+</head>
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+  integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+  crossorigin="anonymous"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap"
+  rel="stylesheet"
+/>
+<link
+  href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap"
+  rel="stylesheet"
+/>
+<!-- START NAV -->
+
+<nav id="navbar" class="nav">
+  <ul class="nav-list">
+    <li>
+      <a href="#about-section">About</a>
+    </li>
+    <li>
+      <a href="#effect">Effect</a>
+    </li>
+        <li>
+          <a href="#compare">Comparision</a>
+      </li>
+      <li>
+      <a href="#cases">Cases</a>
+    </li>
+    <li>
+      <a href="#more">More</a>
+    </li>
+    
+  </ul>
+</nav>
+
+<!-- END NAV -->
+    
+        
+    
+<section id="welcome-section" class="welcome-section">
+  <h1>COVID-19 DISASTER</h1>
+  <p id="para">A project based on COVID-19.
+ </p>
+    
+</section>
+    <section id="about-section" class="welcome-section">
+  <h1>About COVID-19</h1>
+  <p id="para">
+      COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019. COVID-19 is now a pandemic affecting many countries globally.
+ </p>
+        <p>Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.</p>
+        
+    
+</section>
+
+    <section id="effect" class="effect-class">
+    <h1>COVID-19 EFFECTS </h1>
+        <h2>Month wise effect </h2>
+        <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+    </section>
+<section id="compare" class="compare-class">
+    <h1>GDP Growth rate comparition</h1>
+    
+    <div id="curve_chart" style="width: 900px; height: 500px"></div>
+</section>
+    <section id="cases" class="map-class">
+    
+    
+        
+      <iframe width="560" height="560" src="https://app.developer.here.com/coronavirus/" frameborder="0"></iframe>
+    </section>
+    <section id="more" class="more-class">
+        
+        <h1>For more details please enter your email</h1>
+     <p>    Email
+             <input name="email" type="email">
+         </p>
+        <p>
+            <input name="submit" type="submit">
+         </p>
+    </section>
+<style>
+    /*<iframe width="1024" height="576" src="https://app.developer.here.com/coronavirus/" frameborder="0"></iframe>*/
+    /* Custom properties/variables  */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+    para{
+        align-content: center;
+    }
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+    
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Base styles */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem; /* 18px */
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-white);
+}
+
+h1,
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-align: center;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2,p {
+  font-size: 4.2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+    
+.effect-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 140vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+.compare-class {
+    text-decoration:inherit;
+  color: var(--main-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 140vh;
+  background-color: #aaa;
+    background-image:  #aaa;}
+    .map-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 140vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+
+    }
+    .more-class {
+ text-decoration: none;
+  color: var(--main-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  background-color: #aaa;
+  background-image: #aaa ;
+
+    }
+</style>
+
+</html>
