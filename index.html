@@ -8,6 +8,7 @@
          google.charts.load('current', {'packages':['corechart']})
       google.charts.setOnLoadCallback(drawBarchart);
         google.charts.setOnLoadCallback(drawCurvechart);
+        google.charts.setOnLoadCallback(drawtechchart);
         
 
       function drawBarchart() {
@@ -24,13 +25,56 @@
             title: 'COVID-19 CASES',
             
           },
-          bars: 'horizontal' // Required for Material Bar Charts.
+          bars: 'horizontal' 
         };
 
         var chart = new google.charts.Bar(document.getElementById('barchart_material'));
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
+         function drawtechchart() {
+        var data = google.visualization.arrayToDataTable([
+          ['company', 'Change in Tech Job Postings(%)'],
+          ['Cyber Security Engineer', 20],
+          ['.NET Developer', 12],
+          ['Systems Engineer',11 ],
+          ['Database Administrator', 9],
+            ['Systems Administrator', 7],
+            ['Devops Engineer', 6],
+            ['Application Support Engineer', 6],
+            ['Help Desk Technician', 5],
+            ['Software QA Engineer', 2],
+            ['Technical Support Engineer', 2],
+            ['Application Developer', 2],
+            ['Business Analyst', 0],
+            ['Senior Java Developer', 0],
+            ['Java Developer', -1],
+            ['Computer Support Specialist', -1],
+            ['Computer Programmer', -2],
+            ['Network Engineer', -3],
+            ['IT Project Manager', -5],
+            ['Technical Consultant', -7],
+            ['Data Engineer', -7],
+            ['Software Developer', -8],
+            ['Senior Software Developer', -11],
+            ['Graphic Designer', -17],
+            ['Front End Developer', -25]
+            
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Change in Tech Job Postings, Feb to March 2020 (%)',
+            
+          },
+          bars: 'horizontal' 
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('techChart'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+        
         
 
       function drawCurvechart() {
@@ -90,30 +134,53 @@
       <li>
       <a href="#cases">Cases</a>
     </li>
+      <li>
+      <a href="#rise">Growth in future</a>
+    </li>
+      <li>
+      <a href="#tech">Learning</a>
+    </li>
     <li>
       <a href="#more">More</a>
     </li>
     
   </ul>
+    
 </nav>
 
 <!-- END NAV -->
     
         
     
-<section id="welcome-section" class="welcome-section">
+<section id="anim" class="welcome-section">
   <h1>COVID-19 DISASTER</h1>
-  <p id="para">A project based on COVID-19.
+  <p style="color: red">A project based on COVID-19.
  </p>
-    
+    <div class="row">
+  <div class="column">
+    <img src="cloudTitan/74915858.jpg" alt="corona" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="cloudTitan/cor3.jpg" alt="covid-19" style="width:150% ">
+  </div>
+  
+</div>
+    <audio id="meowClip" controls autoplay>
+        <source src="cloudTitan/Muskurayega%20India%20-%20Vishal%20Mishra.ogg" type="audio/ogg">
+  <source src="cloudTitan/Muskurayega%20India%20-%20Vishal%20Mishra.mp3" type="audio/mpeg" />
+  
+</audio>
+   
 </section>
-    <section id="about-section" class="welcome-section">
+    <section id="about-section" class="about-section" >
   <h1>About COVID-19</h1>
-  <p id="para">
+  <p style="color:#000000" >
       COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019. COVID-19 is now a pandemic affecting many countries globally.
  </p>
-        <p>Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.</p>
-        
+        <p style="color:#000000" >Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.</p>
+        <div >
+    <img src="cloudTitan/download.jpg" alt="covid-19" style="width:100% ">
+  </div>
     
 </section>
 
@@ -127,25 +194,69 @@
     
     <div id="curve_chart" style="width: 900px; height: 500px"></div>
 </section>
-    <section id="cases" class="map-class">
+    <section id="cases" class="map-class" >
     
-    
+    <h1>Cases in all over world</h1>
         
-      <iframe width="560" height="560" src="https://app.developer.here.com/coronavirus/" frameborder="0"></iframe>
+      <iframe width="560" height="560" src="https://app.developer.here.com/coronavirus/" frameborder="0" ></iframe>
+    </section>
+    <section id="rise" class="rise-class">
+    <h1>RISE OF DOMAINS AFTER COVID-19</h1>
+        <div>
+            <h2>Remote and digital working will become the new norm</h2>
+        <p style="color:#8d8741">Mass remote working for prolonged times will make people more mature in remote working. It will also change the behavior of people and expectations from companies. Technology will improve significantly to provide not only remote working with great experience but also remote schooling. Homes will start having a home office to qualify for jobs in the future. Everything digital will replace almost everything that needs physical to connect to remote connections. Social distancing being enforced will make an impact on social behavior and more people will work remotely encouraging social distancing as an accepted norm for a longer period.</p>   
+        </div>
+        <div>
+           <h2>New jobs of different kinds will be created</h2>
+            <p style="color:#8d8741">Crisis situations take away millions of jobs, but new ones get created soon. With COVID19, Healthcare and wellness sector will get a tremendous boost and create more jobs. Digital economy will get a major boost and create more jobs for technology professionals. A major change that will start happening is ‘localization’. With reduced travel and possibilities of reduced global trade, local economies will re-emerge and start creating small job opportunities that were destroyed by rapid and massive globalization.</p>
+            </div>
+        <div>
+            <h2>Asian economies outside China will see an increase in manufacturing jobs</h2>
+            <p style="color:#8d8741">It is likely that countries will start looking at each other more suspiciously after the COVID19 breakout and start investing and building local manufacturing capabilities with lower cost and better efficiency. Manufacturing will start moving to South Asian countries out of China and will create more related jobs in those geographies.
+           </p>
+            </div>
+        <div>
+        <h2>The Rise Of Online Learning</h2>
+            <p style="color:#8d8741">Online learning has shown significant growth over the last decade, as the internet and education combine to provide people with the opportunity to gain new skills. Since the COVID-19 outbreak, online learning has become more centric in people's lives. The pandemic has forced schools, universities, and companies to remote working and this booms the usage of online learning. Even before the pandemic, Research and Markets forecasts the online education market as $350 Billion by 2025, so the numbers might be updated after analyzing the growth impacts of COVID-19 on the online learning market. </p>
+        </div>
+    </section>
+     <section id="tech" class="tech-class">
+    <h1 style="color: black">Contribution which can impact your career post COVID-19</h1>
+        <div>
+            
+        •  Sourcing tools
+         </div>
+         <div>
+•  Applicant tracking system
+         </div>
+<div>
+                 •  Pre-employment assessment tools
+
+         </div>
+        <div>
+            •  Virtual interviewing software
+         </div>
+         <div>
+    •  Recruitment marketing suite
+         </div>
+    <div>•  Onboarding software   
+         </div>
+        <div id="techChart" style="width: 900px; height: 500px;"></div>
     </section>
     <section id="more" class="more-class">
         
         <h1>For more details please enter your email</h1>
-     <p>    Email
-             <input name="email" type="email">
+        <form>
+     <p>               
+              <input name="email" type="email" >
          </p>
         <p>
             <input name="submit" type="submit">
          </p>
+        </form>
     </section>
 <style>
-    /*<iframe width="1024" height="576" src="https://app.developer.here.com/coronavirus/" frameborder="0"></iframe>*/
-    /* Custom properties/variables  */
+
 :root {
   --main-white: #f0f0f0;
   --main-red: #be3144;
@@ -161,7 +272,7 @@
     para{
         align-content: center;
     }
-/* box-sizing and font sizing */
+
 *,
 *::before,
 *::after {
@@ -171,38 +282,25 @@
 html {
   box-sizing: border-box;
 
-  /* Set font size for easy rem calculations
-   * default document font size = 16px, 1rem = 16px, 100% = 16px
-   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
-  */
+
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-    
+    div{
+        box-sizing: border-box;
+        margin: 2em;
+  padding: 0;
+}
+    }    
 
-/* A few media query to set some font sizes at different screen sizes.
- * This helps automate a bit of responsiveness.
- * The trick is to use the rem unit for size values, margin and padding.
- * Because rem is relative to the document font size
- * when we scale up or down the font size on the document
- * it will affect all properties using rem units for the values.
-*/
 
-/* I am using the em unit for breakpoints
- * The calculation is the following
- * screen size divided by browser base font size
- * As an example: a breakpoint at 980px
- * 980px / 16px = 61.25em
-*/
-
-/* 1200px / 16px = 75em */
 @media (max-width: 75em) {
   html {
     font-size: 60%;
   }
 }
 
-/* 980px / 16px = 61.25em */
+
 @media (max-width: 61.25em) {
   html {
     font-size: 58%;
@@ -216,14 +314,14 @@ html {
   }
 }
 
-/* Base styles */
+
 
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem; /* 18px */
   font-weight: 400;
   line-height: 1.4;
-  color: var(--main-white);
+  color: var(--main-red);
 }
 
 h1,
@@ -237,8 +335,14 @@ h1 {
   font-size: 6rem;
 }
 
-h2,p {
-  font-size: 4.2rem;
+    h2{
+  font-size: 3.2rem;
+        color:white;
+        
+}
+        p{
+  font-size: 2.0rem;
+  
 }
 
 ul {
@@ -255,7 +359,7 @@ img {
   width: 100%;
 }
 
-/* nav */
+
 
 .nav {
   display: flex;
@@ -294,7 +398,7 @@ img {
   background: var(--main-blue);
 }
 
-/* Welcome section */
+
 
 .welcome-section {
   display: flex;
@@ -302,16 +406,28 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 150vh;
+   color: var(--main-red);
+}
+    .about-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100vh;
-  background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+background-color: #9099A2;
+        color: #6d7993;
+        table-layout: fixed;
+        font-family: monospace;
+         color: var(--main-red);
 }
 
 .welcome-section > p {
   font-size: 3rem;
   font-weight: 200;
   font-style: italic;
-  color: var(--main-red);
+  color: var(--main-white);
 }
     
 .effect-class {
@@ -323,6 +439,7 @@ img {
   height: 140vh;
   background-color: #000;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    
 }
 .compare-class {
     text-decoration:inherit;
@@ -342,8 +459,8 @@ img {
   align-items: center;
   width: 100%;
   height: 140vh;
-  background-color: #000;
-  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  background-color: #1e392a;
+         color: #A239CA;
 
     }
     .more-class {
@@ -354,11 +471,63 @@ img {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   background-color: #aaa;
   background-image: #aaa ;
-
+  }
+    input {
+ width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+       .rise-class {
+ text-decoration:none;
+  color: #f64c72;
+  display: flex;
+           padding: 12px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200vh;
+  background-color: #000000;
+           
+  
+  }
+    .tech-class {
+ text-decoration:none;
+  color: #C0B283;
+  display: flex;
+           padding: 12px 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 250vh;
+  background-color: #F4F4F4;
     }
+.column {
+  float:left;
+  width: 33%;
+  padding: 8px;
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    @media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+
 </style>
 
 </html>
